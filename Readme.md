@@ -4,3 +4,6 @@
 Docker
 MongoDB
 Node.js
+
+## 사용 방법
+docker-compose up --build

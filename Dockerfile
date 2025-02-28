@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # 애플리케이션 시작
-CMD ["node", "index.js"]
+CMD ["node", "backend/index.js"]
