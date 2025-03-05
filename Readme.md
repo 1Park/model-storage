@@ -12,35 +12,35 @@ docker-compose up --build
 
 ## 디렉터리 구조
 
-/model-storage
+/model-storage  
+│  
+├── /backend                 # 백엔드 관련 파일  
+│   ├── /src                 # 소스 코드  
+│   │   ├── /controllers     # 컨트롤러  
+│   │   ├── /models          # 데이터베이스 모델  
+│   │   ├── /routes          # 라우팅  
+│   │   ├── /middlewares      # 미들웨어  
+│   │   └── /config          # 설정 파일  
+│   ├── /tests               # 테스트 파일  
+│   ├── package.json         # npm 패키지 설정  
+│   └── Dockerfile           # 백엔드 도커 설정  
 │
-├── /backend                 # 백엔드 관련 파일
-│   ├── /src                 # 소스 코드
-│   │   ├── /controllers     # 컨트롤러
-│   │   ├── /models          # 데이터베이스 모델
-│   │   ├── /routes          # 라우팅
-│   │   ├── /middlewares      # 미들웨어
-│   │   └── /config          # 설정 파일
-│   ├── /tests               # 테스트 파일
-│   ├── package.json         # npm 패키지 설정
-│   └── Dockerfile           # 백엔드 도커 설정
-│
-├── /frontend                # 프론트엔드 관련 파일
-│   ├── /src                 # 소스 코드
-│   │   ├── /components      # 컴포넌트
-│   │   ├── /pages           # 페이지
-│   │   ├── /assets          # 정적 파일 (이미지, CSS 등)
-│   │   └── /services        # API 서비스
-│   ├── /tests               # 테스트 파일
-│   ├── package.json         # npm 패키지 설정
-│   └── Dockerfile           # 프론트엔드 도커 설정
+├── /frontend                # 프론트엔드 관련 파일  
+│   ├── /src                 # 소스 코드  
+│   │   ├── /components      # 컴포넌트  
+│   │   ├── /pages           # 페이지  
+│   │   ├── /assets          # 정적 파일 (이미지, CSS 등)  
+│   │   └── /services        # API 서비스  
+│   ├── /tests               # 테스트 파일  
+│   ├── package.json         # npm 패키지 설정  
+│   └── Dockerfile           # 프론트엔드 도커 설정  
 │
 │
-├── docker-compose.yml       # 도커 컴포즈 설정
-└── Readme.md                # 프로젝트 설명
+├── docker-compose.yml       # 도커 컴포즈 설정  
+└── Readme.md                # 프로젝트 설명  
 
 
-## 개발 진행
+## 개발 진행  
 2025.03.05
 Google Oauth는 나중에 적용하기로.
 우선 gmail로만 가입받자.
