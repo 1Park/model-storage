@@ -2,7 +2,11 @@ version: '3.8'
 
 services:
   backend:
-    build: .
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+
     ports:
       - "3000:3000"
     volumes:
@@ -10,6 +14,8 @@ services:
       - /usr/src/app/node_modules
     depends_on:
       - mongodb
+    networks:
+      - app-network
     tty: true
 
   mongodb:
@@ -18,6 +24,22 @@ services:
       - "27017:27017"
     volumes:
       - mongodb_data:/data/db
+    networks:
+      - app-network
 
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"  # 프론트엔드가 80 포트에서 제공되도록 설정
+    volumes:
+      - ./build:/app/build  # 빌드된 결과물을 제공
+    networks:
+      - app-network
 volumes:
   mongodb_data:
+
+networks:
+  app-network:
+    driver: bridge
